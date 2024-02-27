@@ -10,7 +10,7 @@
             Console.ReadLine();
         }
 
-        static void Drow(int x, int y, char c) 
+        static void Draw(int x, int y, char c) 
         {
             Console.SetCursorPosition(x, y);
             Console.WriteLine(c);
