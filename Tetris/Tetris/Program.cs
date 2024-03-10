@@ -9,17 +9,47 @@ namespace NewTetris
             Console.SetWindowSize(40, 30);
             Console.SetBufferSize(40, 30);
 
-            Point p1 = new Point();
-            p1.x = 2;
-            p1.y = 5;
-            p1.c = '*';
+            Figure f = new Square(1, 1, '*');
+            f.Draw();
+
+            Thread.Sleep(1000);
+            f.Hide();
+            f.Move(Direction.LEFT);
+            f.Draw();
+
+            Thread.Sleep(1000);
+            f.Hide();
+            f.Move(Direction.DOWN);
+            f.Draw();
+
+            Thread.Sleep(1000);
+            f.Hide();
+            f.Move(Direction.RIGHT);
+            f.Draw();
+
+            /*
+            Figure[] f = new Figure[2];
+            f[0] = new Square(2, 2, '*');
+            f[1] = new Stick(5, 5, '*');
+
+            foreach (Figure f2 in f) 
+            {
+                f2.Draw();
+            }
+
+            /*
+            Square s = new Square(2, 5, '*');
+            s.Draw();
+
+            Stick st = new Stick(6, 6, '*');
+            st.Draw();
+
+            Point p1 = new Point(2, 5, '*');
             p1.Draw();
 
-            Point p2 = new Point();
-            p2.x = 5;
-            p2.y = 10;
-            p2.c = '*';
+            Point p2 = new Point(5, 2, '*');
             p2.Draw();
+            */
 
             Console.ReadLine();
         }
